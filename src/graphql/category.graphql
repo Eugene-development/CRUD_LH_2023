@@ -8,8 +8,8 @@ type Category {
     updated_at: String
     product: [Product] @morphMany
     text: [Text] @morphMany
-    # seoTitle: SeoTitle @morphOne
-    # seoDescription: SeoDescription @morphOne
+    seoTitle: SeoTitle @morphOne
+    seoDescription: SeoDescription @morphOne
     parentable: Parentable! @morphTo
 }
 
@@ -42,6 +42,6 @@ input UpdateCategoryInput {
     slug: String
     parentable_type: String
     parentable_id: Int
-    # seoTitle: UpdateSeoTitleMorphOne
-    # seoDescription: UpdateSeoDescriptionMorphOne
+    seoTitle: UpdateSeoTitleMorphOne
+    seoDescription: UpdateSeoDescriptionMorphOne
 }
