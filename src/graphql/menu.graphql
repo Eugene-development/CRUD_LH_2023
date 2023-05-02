@@ -13,7 +13,7 @@ extend type Query {
 extend type Mutation {
     createMenu(input: CreateMenuInput @spread): Menu @create
     updateMenu(input: UpdateMenuInput @spread): Menu @update
-    deleteMenu(id: ID!): Menu @delete
+    deleteMenu(id: ID! @whereKey): Menu @delete
 }
 
 input CreateMenuInput {

@@ -8,8 +8,8 @@ type Category {
     updated_at: String
     product: [Product] @morphMany
     text: [Text] @morphMany
-    seoTitle: SeoTitle @morphOne
-    seoDescription: SeoDescription @morphOne
+    # seoTitle: SeoTitle @morphOne
+    # seoDescription: SeoDescription @morphOne
     parentable: Parentable! @morphTo
 }
 
@@ -22,7 +22,7 @@ extend type Query {
 extend type Mutation {
     createCategory(input: CreateCategoryInput @spread): Category @create
     updateCategory(input: UpdateCategoryInput @spread): Category @update
-    deleteCategory(id: ID!): Category @delete
+    deleteCategory(id: ID! @whereKey): Category @delete
 }
 
 input CreateCategoryInput {
@@ -42,5 +42,6 @@ input UpdateCategoryInput {
     slug: String
     parentable_type: String
     parentable_id: Int
-    seoTitle: UpdateSeoTitleMorphOne
+    # seoTitle: UpdateSeoTitleMorphOne
+    # seoDescription: UpdateSeoDescriptionMorphOne
 }

@@ -19,7 +19,7 @@ extend type Query {
 extend type Mutation {
     createCatalog(input: CreateCatalogInput @spread): Catalog @create
     updateCatalog(input: UpdateCatalogInput @spread): Catalog @update
-    deleteCatalog(id: ID!): Catalog @delete
+    deleteCatalog(id: ID! @whereKey): Catalog @delete
 }
 
 input CreateCatalogInput {

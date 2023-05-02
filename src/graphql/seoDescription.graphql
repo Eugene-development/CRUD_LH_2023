@@ -9,3 +9,31 @@ type SeoDescription {
 extend type Query {
     seoDescription: [SeoDescription] @all
 }
+
+input CreateSeoDescriptionInput {
+    key: String!
+    value: String!
+}
+
+input UpdateSeoDescriptionInput {
+    id: ID!
+    key: String!
+    value: String!
+}
+
+input CreateSeoDescriptionMorphMany {
+    create: CreateSeoDescriptionInput!
+}
+
+input UpdateSeoDescriptionMorphOne {
+    update: UpdateSeoDescriptionInput!
+}
+
+extend type Mutation {
+    createSeoDescription(
+        input: CreateSeoDescriptionInput @spread
+    ): SeoDescription @create
+    updateSeoDescription(
+        input: UpdateSeoDescriptionInput @spread
+    ): SeoDescription @update
+}

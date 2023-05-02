@@ -13,7 +13,7 @@ extend type Query {
 extend type Mutation {
     createHead(input: CreateHeadInput @spread): Head @create
     updateHead(input: UpdateHeadInput @spread): Head @update
-    deleteHead(id: ID!): Head @delete
+    deleteHead(id: ID! @whereKey): Head @delete
 }
 
 input CreateHeadInput {
