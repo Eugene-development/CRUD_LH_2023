@@ -3,7 +3,7 @@ type Project {
     key: String
     value: String
     resource: [Resource!] @morphMany
-    seoquery: [Seoquery!] @morphMany
+    seoQuery: [SeoQuery!] @morphMany
     text: [Text] @morphMany
 }
 

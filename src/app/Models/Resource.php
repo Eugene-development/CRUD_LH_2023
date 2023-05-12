@@ -21,9 +21,9 @@ class Resource extends Model
         return $this->morphMany(Position::class, 'parentable');
     }
 
-    public function seoquery(): MorphMany
+    public function seoQuery(): MorphMany
     {
-        return $this->morphMany(Seoquery::class, 'parentable');
+        return $this->morphMany(SeoQuery::class, 'parentable');
     }
     // public function first_position(): MorphMany
     // {

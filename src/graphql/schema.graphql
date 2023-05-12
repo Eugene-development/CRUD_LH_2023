@@ -10,9 +10,9 @@
 #import text.graphql
 #import image.graphql
 #import resource.graphql
-#import seoquery.graphql
 #import position.graphql
 #import cart.graphql
+#import seoQuery.graphql
 #import seoTitle.graphql
 #import seoDescription.graphql
 
@@ -31,6 +31,7 @@ union Parentable =
     | Resource
     | Position
     | Cart
+    | SeoQuery
     | SeoTitle
     | SeoDescription
 
