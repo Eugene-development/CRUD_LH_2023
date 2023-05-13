@@ -58,7 +58,7 @@ class AppServiceProvider extends ServiceProvider
             'users' => 'App\Models\Users',
             'video' => 'App\Models\Video',
             'resource' => 'App\Models\Resource',
-            'seoquery' => 'App\Models\Seoquery',
+            'seoquery' => 'App\Models\SeoQuery',
             'position' => 'App\Models\Position',
         ]);
     }

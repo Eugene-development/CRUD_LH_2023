@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
@@ -21,11 +20,6 @@ class SeoQuery extends Model
     {
         return $this->morphMany(Resource::class, 'parentable');
     }
-
-    // public function seoposition(): MorphMany
-    // {
-    //     return $this->MorphMany(Position::class);
-    // }
 
     public function position(): MorphMany
     {
