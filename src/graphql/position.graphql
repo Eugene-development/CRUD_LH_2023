@@ -1,7 +1,7 @@
 type Position {
     id: ID
     key: String
-    value: String
+    value: Int
     created_at: String
     parentable_type: String
     parentable_id: String
